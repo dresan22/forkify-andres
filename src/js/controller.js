@@ -43,14 +43,12 @@ const controlRecipes = async function () {
 const controlSearchResults = async function () {
   try {
     resultsView.renderSpinner();
-    // console.log(resultsView);
     //1 get search query
     const query = searchView.getQuery();
     if (!query) return;
 
     //2 load search results
     await model.loadSearchResults(query);
-    // console.log(model.state.search.results);
 
     //3 render results
     // resultsView.render(model.state.search.results);
@@ -102,7 +100,6 @@ const controlAddRecipe = async function (newRecipe) {
     //show laoding spinner
     addRecipeView.renderSpinner();
 
-    // console.log(newRecipe);
     await model.uploadRecipe(newRecipe);
 
     //render recipe
@@ -127,7 +124,7 @@ const controlAddRecipe = async function (newRecipe) {
   }
 };
 
-logo = document.querySelector('.header__logo');
+const logo = document.querySelector('.header__logo');
 
 // logo.addEventListener('click', function (e) {
 //   console.log(e.target);
