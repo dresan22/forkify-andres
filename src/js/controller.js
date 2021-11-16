@@ -43,7 +43,7 @@ const controlRecipes = async function () {
 const controlSearchResults = async function () {
   try {
     resultsView.renderSpinner();
-    console.log(resultsView);
+    // console.log(resultsView);
     //1 get search query
     const query = searchView.getQuery();
     if (!query) return;
@@ -126,6 +126,13 @@ const controlAddRecipe = async function (newRecipe) {
     addRecipeView.renderError(err.message);
   }
 };
+
+logo = document.querySelector('.header__logo');
+
+// logo.addEventListener('click', function (e) {
+//   console.log(e.target);
+//   location.reload();
+// });
 
 const init = function () {
   bookmarksView.addHandlerRender(controlBookmarks);
