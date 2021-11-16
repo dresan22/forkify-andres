@@ -1,3 +1,3 @@
 #fokify project
 
-recipe app
+recipe app with servings
